@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat VIP</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login">
+  <h2>Entrar no chat</h2>
+  <input id="nickname" placeholder="Seu nick">
+  <button onclick="enterChat()">Entrar</button>
+</div>
+
+<div id="chat" class="hidden">
+  <aside>
+    <h3>Usuários online</h3>
+    <ul id="users"></ul>
+  </aside>
+
+  <main>
+    <div id="messages"></div>
+    <input id="messageInput" placeholder="Digite sua mensagem">
+    <button onclick="sendMessage()">Enviar</button>
+  </main>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
